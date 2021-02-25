@@ -53,8 +53,9 @@
 
       .users {
         width: 100%;
-        height: 112px;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
         align-items: center;
         justify-content: center;
         padding: 16px;
@@ -62,15 +63,20 @@
         text-align: center;
       }
 
+      @media (min-width: 600px) {
+        .users {
+          grid-template-columns: repeat(auto-fit, 80px);
+        }
+      }
+
       .user {
         display: block;
         width: 80px;
         height: 80px;
-        margin: 0 20px;
+        margin: auto;
         border-radius: 22px;
         background-color: #000;
         background-size: 100%;
-        flex-shrink: 0;
       }
 
       .josh {
@@ -85,6 +91,10 @@
         background-image: url("https://pbs.twimg.com/profile_images/1335099148488544256/203GsW3B_400x400.jpg")
       }
 
+      .shootyourshot {
+        background-image: url("https://pbs.twimg.com/profile_images/1360403636329799680/854WC9Lr_400x400.jpg")
+      }
+
       .contact {
         display: block;
         margin-top: 32px;
@@ -96,9 +106,10 @@
     <div class="image-wrapper"><div class="image"></div></div>
     <div class="text">Invite only</div>
     <div class="users">
-      <a href="https://justinkan.club" target="_blank" class="user justin"></a>
-      <a href="https://constine.club" target="_blank" class="user josh"></a>
-      <a href="https://jenlee.vip" target="_blank" class="user jen"></a>
+      <a href="https://justinkan.club" target="_blank" class="user justin" title="Justin Kan's community"></a>
+      <a href="https://constine.club" target="_blank" class="user josh" title="Josh Constine's community"></a>
+      <a href="https://shotson.club" target="_blank" class="user shootyourshot" title="Shoot Your Shot's community"></a>
+      <a href="https://jenlee.vip" target="_blank" class="user jen" title="Jen Lee's community"></a>
     </div>
     <a class="contact" href="mailto:raising.a.seed.soon@spore.gg" target="_blank">raising.a.seed.soon@spore.gg</a>
   </body>
