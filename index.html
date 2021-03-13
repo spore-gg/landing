@@ -17,22 +17,24 @@
     <style type='text/css'>
       body {
         background: #16151a;
-        display: flex;
+        /* display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
         width: 100%;
         height: 100%;
         box-sizing: border-box;
-        padding: 16px 0;
+        padding: 16px;
         margin: 0;
         overflow-x: hidden;
         font-family: Montserrat;
+        text-align: center;
       }
 
       .image-wrapper {
         width: 300px;
         max-width: 60%;
+        margin: 32px auto 0 auto;
         /* height: 316px; */
       }
 
@@ -45,7 +47,7 @@
       }
 
       .text {
-        margin: 56px auto;
+        margin: 56px auto 16px auto;
         font-size: 25px;
         letter-spacing: 2.77px;
         text-align: center;
@@ -60,14 +62,16 @@
         grid-gap: 40px;
         align-items: center;
         justify-content: center;
-        padding: 16px;
+        padding: 40px 16px;
         box-sizing: border-box;
         text-align: center;
+        margin: 32px auto 0 auto
       }
 
       @media (min-width: 600px) {
         .users {
-          grid-template-columns: repeat(auto-fit, 80px);
+          max-width: 600px;
+          grid-template-columns: repeat(4, 1fr);
         }
       }
 
@@ -79,10 +83,12 @@
         border-radius: 22px;
         background-color: #000;
         background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
       }
 
       .josh {
-        background-image: url("https://pbs.twimg.com/profile_images/1253034434216919040/oiMQKhyy_400x400.jpg")
+        background-image: url("https://fdn.uno/images/org/bebdff50-68c9-11eb-b92e-13fd207b91fc_60241d50-7efc-11eb-9d01-d16ece21a455.small.png")
       }
 
       .justin {
@@ -94,12 +100,66 @@
       }
 
       .shootyourshot {
-        background-image: url("https://pbs.twimg.com/profile_images/1360403636329799680/854WC9Lr_400x400.jpg")
+        background-image: url("https://tdn.one/assets/images/spore/shootyourshot_landing/nyu.jpg")
+      }
+
+      .housin {
+        background-image: url("https://fdn.uno/images/org/75032f80-7fc5-11eb-9e48-f518b845a8d3_decb5140-7fca-11eb-85b4-bf81acb145e7.small.jpg")
+      }
+
+      .producthunt {
+        background-image: url("https://tdn.one/assets/images/spore/producthunt.png")
+      }
+
+      .techcrunch {
+        background-image: url("https://pbs.twimg.com/profile_images/1096066608034918401/m8wnTWsX_400x400.png")
+      }
+
+      .doubledown {
+        background-image: url("https://fdn.uno/images/org/be38e0f0-805b-11eb-b449-775902f62f09_cdaaff00-8065-11eb-b197-ac5bc3a00698.small.png")
+      }
+
+      .cpg {
+        background-image: url("https://fdn.uno/images/org/72e2d5b0-7c92-11eb-91a9-b68c92413b6f_80ab7230-7efc-11eb-b263-8f4534822b13.small.png")
+      }
+
+      .foodtech {
+        background-image: url("https://fdn.uno/images/org/03babd10-813d-11eb-97de-002d10b4b92f_540c5430-816b-11eb-a7f3-8348974e8f78.small.png");
+        background-color: #ffffff;
+      }
+
+      .hotonthemic {
+        background-image: url("https://fdn.uno/images/org/fa51a370-829e-11eb-9acf-958854a0f744_9cc51060-82a4-11eb-bf86-2d09136aecd9.small.png")
+      }
+
+      .sosv {
+        background-image: url("https://fdn.uno/images/org/d532f4b0-8044-11eb-b656-7581d72eb2b3_6c66d8a0-805f-11eb-8878-8b08136dc0a9.small.png")
+      }
+
+      .ondeck {
+        background-image: url("https://fdn.uno/images/org/b517b630-8093-11eb-952d-f0144b8c520a_bd280400-8099-11eb-856b-6271f244ef92.small.png")
+      }
+
+      .braincare {
+        background-image: url("https://fdn.uno/images/org/42a616e0-82d8-11eb-944b-9d30e861278d_f2bd20d0-8352-11eb-be3c-661d25ab69bf.small.png")
+      }
+
+      .techmeme {
+        background-image: url("https://pbs.twimg.com/profile_images/1191943129823399936/ZvfTRAlg_400x400.jpg")
+      }
+
+      .dreamdinner {
+        background-image: url("https://tdn.one/assets/images/spore/dreamdinnerparty.jpg")
+      }
+
+      .digitalculture {
+        background-image: url("https://tdn.one/assets/images/spore/digitalclub.svg");
+        background-color: #fff;
       }
 
       .contact {
         display: block;
-        margin-top: 32px;
+        margin-top: 16px;
         color: #fff !important;
       }
     </style>
@@ -107,14 +167,32 @@
   <body>
     <div class="image-wrapper"><div class="image"></div></div>
     <div class="text">Invite only</div>
-    <div class="users">
-      <a href="https://justinkan.club" target="_blank" class="user justin" title="Justin Kan's community"></a>
-      <a href="https://constine.club" target="_blank" class="user josh" title="Josh Constine's community"></a>
-      <a href="https://shotson.club" target="_blank" class="user shootyourshot" title="Shoot Your Shot's community"></a>
-      <a href="https://mcjlive.club" target="_blank" class="user mcj" title="My Climate Journey's community"></a>
-    </div>
     <a class="contact" href="mailto:raising.a.seed.soon@spore.gg" target="_blank">raising.a.seed.soon@spore.gg</a>
     <a class="contact" href="mailto:hiring.eng.and.bizdev@spore.gg" target="_blank">hiring.eng.and.bizdev@spore.gg</a>
+    <div class="users">
+      <a href="https://constine.club" target="_blank" class="user josh" title="Josh Constine's community"></a>
+      <a href="https://shotson.club" target="_blank" class="user shootyourshot" title="nyu girls' community"></a>
+      <a href="https://mcjlive.club" target="_blank" class="user mcj" title="My Climate Journey's community"></a>
+      <a href="https://clubcpg.com" target="_blank" class="user cpg" title="Club CPG's community"></a>
+      
+      <a href="https://housinaround.club" target="_blank" class="user housin" title="Housin' Around's community"></a>
+      <a href="https://producthunt.live" target="_blank" class="user producthunt" title="Product Hunt's community"></a>
+      <a href="https://doubledown.show" target="_blank" class="user doubledown" title="Double Down's community"></a>
+      <a href="https://techcrunch.vip" target="_blank" class="user techcrunch" title="TechCrunch's community"></a>
+      
+      <a href="https://foodtechconnect.club" target="_blank" class="user foodtech" title="Food Tech Connect's community"></a>
+      <a href="https://justinkan.club" target="_blank" class="user justin" title="Justin Kan's community"></a>
+      <a href="https://hotonthemic.club" target="_blank" class="user hotonthemic" title="Hot on the Mic's community"></a>
+      <a href="https://sosv.club" target="_blank" class="user sosv" title="SOSV's community"></a>
+
+      <a href="https://techmeme.live" target="_blank" class="user techmeme" title="TechMeme's community"></a>
+      <a href="https://ondeck.vip" target="_blank" class="user ondeck" title="On Deck's community"></a>
+      <a href="https://club.yourheights.com" target="_blank" class="user braincare" title="Brain Care Club's community"></a>
+      <!-- <a href="https://startupradio.club" target="_blank" class="user startupradio" title="Startup Radio's community"></a> -->
+
+      <a href="https://dreamdinner.club" target="_blank" class="user dreamdinner" title="Dream Dinner Party's community"></a>
+      <a href="https://getanswers.club" target="_blank" class="user digitalculture" title="Digital Culture Club's community"></a>
+    </div>
   </body>
 
 </html>
